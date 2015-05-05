@@ -1,0 +1,11 @@
+name = l'Amuzette Admin Theme
+description = A subtheme of Shiny customized for l'Amuzette.
+core = 7.x
+base theme = shiny
+
+; STYLESHEETS
+stylesheets[all][] = css/lamuzette_admin.css
+
+
+
+

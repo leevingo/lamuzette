@@ -1,0 +1,30 @@
+<?php
+/**
+ * @file
+ * Implements functionalities for lamuzette.be
+ */
+
+/**
+ * Implements hook_action_info.
+ * @return type
+ */
+function lamuzette_rules_action_info() {
+
+  $action = array(
+    'lamuzette_calculate_rate_by_order_weight' => array(
+      'group' => 'Commerce Shipping',
+      'label' => t('Calculate rate by order weight'),
+      'provides' => array(
+        'order' => array('type' => 'commerce_order', 'label' => t('The order object.')),
+      ),
+      'parameter' => array(
+        'order' => array('type' => 'commerce_order', 'label' => t('The order object.')),
+      ),
+    )
+  );
+  return $action;
+}
+
+function lamuzette_calculate_rate_by_order_weight($order_id) {
+  
+}

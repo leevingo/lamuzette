@@ -1,0 +1,5 @@
+name = l' Amuzette
+description = Implements functionalities for lamuzette.be.
+core = 7.x
+package = "Lamuzette"
+files [] = lamuzette.module
