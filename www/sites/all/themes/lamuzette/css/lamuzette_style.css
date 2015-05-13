@@ -597,7 +597,7 @@ tr.even, tr.odd {
   display: none;
 }
 
-/* Share buttons */
+/* Share buttons - list page */
 .addtoany_list a span.a2a_img {
   height: 21px;
   line-height: 21px;
@@ -621,6 +621,98 @@ tr.even, tr.odd {
   background-position-y: -24px !important;
 }
 
+/* Product detail */
+.node-product-display-full .container-24.grid-14 {
+  width: 636px;
+  padding-left: 0;
+}
+.node-product-display-full .container-24.grid-8 {
+  width: 297px;
+}
+.node-product-display-full .container-24.grid-14.prefix-1 {
+  padding-left: 0;
+}
+.node-product-display-full .container-24.grid-8.prefix-1 {
+  padding-left: 26px;
+}
+.node-product-display-full .field-slideshow-controls {
+  position: absolute;
+  z-index: 10;
+  top: 320px;
+  width: 100%;
+}
+.node-product-display-full .field-slideshow-controls a {
+  display: block;
+  float: left;
+  width: 50px;
+  height: 50px;
+  text-indent: -999px;
+  background: url(../images/detail-arrow-left.png) 0 0 no-repeat;
+}
+.node-product-display-full .field-slideshow-controls a.next {
+  float: right;
+  background: url(../images/detail-arrow-right.png) 0 0 no-repeat;
+}
+.node-product-display-full .field-slideshow {
+	border: 1px solid #fce8df;
+	margin-bottom: 10px;
+}
+.node-product-display-full .field-slideshow-pager li {
+  margin: 0 6px 6px 0;
+  border: 1px solid #ddd;
+}
+.node-product-display-full .field-slideshow-pager li:nth-child(3n+3) {
+  margin: 0;
+}
+.node-product-display-full .field-slideshow-pager li.activeSlide {
+  border: 1px solid #fce8df;
+}
+.node-product-display-full .field-name-field-product-supplier {
+	float: left;
+	margin-right: 20px;
+}
+.node-product-display-full .field-name-field-product-supplier .field-item {
+  font-family: Georgia, 'Times New Roman', serif;
+  color: #f9aa89;
+  font-style: italic;
+  font-size: 26px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin: 0;
+  padding: 0; 
+}
+.node-product-display-full h2 {
+	color: #808080;
+	font-size: 26px;
+  font-weight: normal; 
+	text-transform: none;
+}
+.node-product-display-full .field-name-commerce-price td {
+  padding: 5px 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 30px;
+  font-weight: normal;
+  color: #808080;
+}
+.node-product-display-full .field-name-commerce-price tr.odd td.rrp-title,
+.node-product-display-full .field-name-commerce-price tr.odd td.webprice-title {
+	display: none;
+}
+
+.node-product-display-full  .field-name-body p,
+.node-product-display-full .commerce-product-field .field-item,
+.node-product-display-full .commerce-product-field .field-label,
+.node-product-display-full .field-name-field-product-category a {
+	font-family: "manksansregular", sans-serif, Sans;
+	font-size: 13px;
+	font-weight: normal;
+	color: #f9aa89;
+	padding: 4px 0;
+}
+.node-product-display-full .commerce-product-field .field-item,
+.node-product-display-full  .field-name-body p {
+color: #808080;
+}
 /* Buttons */
 .page-user a.login-register,
 .page-user a.login-account,
