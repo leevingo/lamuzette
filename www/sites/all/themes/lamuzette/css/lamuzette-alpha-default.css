@@ -1,1 +1,11 @@
 /* This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout). */
+.node-product-display-full .group-left {
+  width: 66.25%;
+  padding: 0;
+}
+.node-product-display-full .group-right {
+  width: 31.50%;
+  padding: 0;
+  padding-left: 2.25%;
+  margin-top: 16px;
+}
