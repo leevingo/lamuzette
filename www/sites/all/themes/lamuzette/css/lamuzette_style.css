@@ -347,17 +347,35 @@ tr.even, tr.odd {
 
 .page-nieuws .field-name-field-news-item-image {
   float: left;
-  padding: 10px 10px 10px 0;
+  padding: 10px 30px 10px 0;
 }
 
 .page-nieuws .field-name-body {
   padding: 10px 0;
 }
-
+.page-nieuws .node-news-item.node-teaser {
+	border-bottom: 1px solid #ddd;
+	padding-bottom: 30px;
+}
+.page-nieuws .node-news-item.node-teaser h3 {
+font-family: Georgia, 'Times New Roman', serif;
+  color: #808080;
+  font-style: italic;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+}
+.page-nieuws .field-name-post-date {
+font-family: "manksansregular", sans-serif, Sans;
+  font-size: 13px;
+  font-weight: normal;
+  padding: 4px 0;
+  color: #808080;
+}
 .page-nieuws .node {
-  border: 1px solid #E0E3E6;
+  border: none;
   display: block;
-  margin: 15px 0px;
+  margin: 15px 0px 0;
   padding: 10px 15px;
   width: auto;
 }
