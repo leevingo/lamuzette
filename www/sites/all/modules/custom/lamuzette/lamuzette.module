@@ -4,6 +4,19 @@
  * Implements functionalities for lamuzette.be
  */
 
+
+function lamuzette_menu_alter(&$items) {
+  $items['admin/config/development/performance']['access callback'] = '_accesscheck';
+}
+
+function _accesscheck(){
+  global $user;
+  if(in_array('shop admin', $user->roles) || in_array('administrator', $user->roles)){
+     return TRUE;
+  }
+  return FALSE;
+}
+
 /**
  * Implements hook_action_info.
  * @return type
@@ -26,5 +39,5 @@ function lamuzette_rules_action_info() {
 }
 
 function lamuzette_calculate_rate_by_order_weight($order_id) {
-  
+
 }

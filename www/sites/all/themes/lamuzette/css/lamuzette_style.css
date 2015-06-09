@@ -101,14 +101,14 @@ a:link, a:visited {
 .cart-empty-page,
 a, p, ul, ol, li, img, span, strong, em {
   margin-bottom: 0;
-  font-family: Georgia, "Times New Roman", Serif;
+  font-family: "Georgia", "Times New Roman", Serif;
   //font-size: 15px;
   line-height: 120%;
   color: #808080;
 }
 
 textarea, select, input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"] {
-  font-family: Georgia, "Times New Roman", Serif;
+  font-family: "Georgia", "Times New Roman", Serif;
   font-size: 15px;
   line-height: 120%;
   color: #808080;
@@ -124,7 +124,7 @@ button:focus, button:active, input:focus, input:active, select:focus, select:act
 }
 
 .form-item label {
-  font-family: Georgia, "Times New Roman", Serif;
+  font-family: "Georgia", "Times New Roman", Serif;
   font-size: 15px;
   line-height: 120%;
   color: #808080;
@@ -139,7 +139,7 @@ tr.even, tr.odd {
 tr.odd .form-item,
 tr.even .form-item {
   text-transform: none;
-  font-family: Georgia, 'Times New Roman', serif;
+  font-family: "Georgia", 'Times New Roman', serif;
   color: #808080;
 }
 
@@ -153,11 +153,12 @@ tr.even .form-item {
 }
 
 #region-menu {
-  border-bottom: 2px solid #ddd;
+  border-bottom: 1px solid #ddd;
   padding-top: 10px;
 }
 #region-menu .block-block {
   float: left;
+  margin-top: -4px;
 }
 
 #region-menu .block-menu-menu-site-menu {
@@ -172,9 +173,24 @@ tr.even .form-item {
   margin: 0;
 }
 
+#region-menu .block-menu-user-menu .content ul.menu {
+  margin-top: 0;
+}
+
 #region-menu .block-menu.block-menu-user-menu ul.menu li a {
   padding: 0;
   text-align: right;
+  color: #aaa;
+}
+
+#region-menu .block-menu.block-menu-user-menu .content ul.menu li.first {
+  padding-right: 10px;
+  padding-left: 0;
+}
+
+#region-menu .block-menu.block-menu-user-menu .content ul.menu li.last {
+  padding-left: 10px;
+  padding-right: 0;
 }
 
 .zone-menu .block-menu {
@@ -189,7 +205,7 @@ tr.even .form-item {
   display: block;
   font-family: "manksansregular", sans-serif, Sans;
   font-weight: normal;
-  padding: 0 30px;
+  padding: 0 20px;
   font-size: 17px;
   text-decoration: none;
   text-transform: lowercase;
@@ -322,8 +338,8 @@ img.field-slideshow-thumbnail {
   text-indent: -999px;
   background: url('../images/arrow-left.png') no-repeat;
   background-size: contain;
-  width: 15%;
-  height: 15%;
+  width: 30px;
+  height: 30px;
 }
 
 .node-type-store-page .field-slideshow-controls a.next {
@@ -331,15 +347,15 @@ img.field-slideshow-thumbnail {
   text-indent: -999px;
   background: url('../images/arrow-right.png') no-repeat;
   background-size: contain;
-  width: 5%;
-  height: 15%;
+  width: 30px;
+  height: 30px;
 }
 
 .node-type-store-page .field-slideshow {
   float: left;
   width: 49.5% !important;
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
 }
 
 .node-type-store-page .field-slideshow-slide {
@@ -362,6 +378,10 @@ img.field-slideshow-thumbnail {
 
 .node-type-store-page .item-list li.activeSlide {
   display: none;
+}
+
+.block-formblock-contact-site {
+  margin-top: 10px;
 }
 
 .page-nieuws .field-name-field-news-item-image {
@@ -453,7 +473,7 @@ font-family: "manksansregular", sans-serif, Sans;
 }
 .block-shopping-cart-block .content .view-shopping-cart .line-item-summary ul.links {
   background-color: #f6af8e;
-  width: 135px;
+  width: 137px;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -464,6 +484,10 @@ font-family: "manksansregular", sans-serif, Sans;
   color: white;
   font-size: 16px;
   font-weight: normal;
+  text-transform: lowercase;
+}
+.block-shopping-cart-block .content .view-shopping-cart .line-item-summary ul.links li a:hover {
+  text-decoration: none;
 }
 
 #views-form-commerce-cart-form-default table td,
@@ -517,6 +541,14 @@ font-family: "manksansregular", sans-serif, Sans;
   text-align: left;
 }
 
+#views-form-commerce-cart-form-default table th.views-field-created,
+#commerce-checkout-form-checkout .view-commerce-cart-summary table th.views-field-created,
+#commerce-checkout-form-review .view-commerce-cart-summary table th.views-field-created,
+.page-user-orders .view-commerce-line-item-table table th.views-field-created,
+.view-commerce-backoffice-user-orders table th.views-field-created {
+  text-align: left;
+}
+
 #views-form-commerce-cart-form-default table th.items,
 #commerce-checkout-form-checkout .view-commerce-cart-summary table th.items,
 #commerce-checkout-form-review .view-commerce-cart-summary table th.items,
@@ -539,6 +571,15 @@ font-family: "manksansregular", sans-serif, Sans;
 #commerce-checkout-form-review .view-commerce-cart-summary table td.views-field-nothing,
 .page-user-orders .view-commerce-line-item-table table td.views-field-nothing,
 .view-commerce-backoffice-user-orders table td.views-field-nothing {
+  text-align: left;
+  color: #000;
+}
+
+#views-form-commerce-cart-form-default table td.views-field-created,
+#commerce-checkout-form-checkout .view-commerce-cart-summary table td.views-field-created,
+#commerce-checkout-form-review .view-commerce-cart-summary table td.views-field-created,
+.page-user-orders .view-commerce-line-item-table table td.views-field-created,
+.view-commerce-backoffice-user-orders table td.views-field-created {
   text-align: left;
   color: #000;
 }
@@ -605,6 +646,43 @@ font-family: "manksansregular", sans-serif, Sans;
 .field-name-commerce-order-total .field-items {
   background-color: #f6af8e;
 }
+
+.page-checkout #commerce-checkout-form-checkout fieldset label,
+.page-checkout #commerce-checkout-form-review fieldset label {
+  float: left;
+  width: 30%;
+  padding-right: 1%;
+  display: inline;
+}
+
+.page-checkout #commerce-checkout-form-checkout fieldset.customer_profile_billing .locality-block .form-item label,
+.page-checkout #commerce-checkout-form-checkout fieldset.customer_profile_shipping .locality-block .form-item label,
+.page-checkout #commerce-checkout-form-review fieldset.customer_profile_billing .locality-block .form-item label,
+.page-checkout #commerce-checkout-form-review fieldset.customer_profile_shipping .locality-block .form-item label {
+  float: left;
+  width: 30%;
+  padding-right: 1%;
+  display: inline;
+}
+
+.page-checkout #commerce-checkout-form-checkout select,
+.page-checkout #commerce-checkout-form-checkout input,
+.page-checkout #commerce-checkout-form-checkout .locality-block .form-item input {
+  width: 65%;
+}
+.page-checkout #commerce-checkout-form-checkout input.checkout-cancel,
+.page-checkout #commerce-checkout-form-checkout input.checkout-continue,
+.page-checkout #commerce-checkout-form-checkout #edit-customer-profile-shipping-commerce-customer-profile-copy {
+  width: auto;
+}
+
+.page-checkout #commerce-checkout-form-checkout fieldset.customer_profile_billing .locality-block .form-item,
+.page-checkout #commerce-checkout-form-checkout fieldset.customer_profile_shipping .locality-block .form-item,
+.page-checkout #commerce-checkout-form-review fieldset.customer_profile_billing .locality-block .form-item,
+.page-checkout #commerce-checkout-form-review fieldset.customer_profile_shipping .locality-block .form-item {
+  width: 100%;
+}
+
 
 /* product list */
 .page-products .view-display-products li.views-row,
@@ -757,6 +835,8 @@ font-family: "manksansregular", sans-serif, Sans;
 .view-commerce-backoffice-user-orders table.commerce-price-formatted-components td.component-title {
   border: 0;
   text-align: left;
+  font-family: "manksansregular", sans-serif, Sans;
+  font-style: normal;
 }
 
 #views-form-commerce-cart-form-default table.commerce-price-formatted-components td.component-total,
@@ -817,9 +897,10 @@ font-family: "manksansregular", sans-serif, Sans;
 
 #customer-profile-billing-ajax-wrapper,
 #customer-profile-shipping-ajax-wrapper {
-  width: 50%;
+  width: 48%;
   display: inline-block;
   vertical-align: top;
+  padding: 1%;
 }
 
 #commerce-shipping-service-ajax-wrapper legend {
@@ -870,7 +951,7 @@ font-family: "manksansregular", sans-serif, Sans;
 .addtoany_list a span.a2a_img {
   height: 21px;
   line-height: 21px;
-  width: 21px;
+  width: 24px;
   background: url(../images/share_btns.png) left top no-repeat;
 }
 .addtoany_list a .a2a_i_pinterest {
@@ -889,11 +970,15 @@ font-family: "manksansregular", sans-serif, Sans;
   opacity: 1;
   background-position-y: -24px !important;
 }
+
+.addtoany_list > a {
+  padding: 0 2px 0 0;
+}
 /* Share buttons - product detail page */
 .node-product-type-full .addtoany_list a span.a2a_img {
-  height: 36px;
-  line-height: 36px;
-  width: 36px;
+  height: 37px;
+  line-height: 37px;
+  width: 41px;
   background: url(../images/share_btns_big.png) left top no-repeat;
 }
 .node-product-type-full .addtoany_list a .a2a_i_pinterest {
@@ -1113,7 +1198,7 @@ font-family: "manksansregular", sans-serif, Sans;
 .node-type-product-display div.messages.commerce-add-to-cart-confirmation .message-inner .added-product-title {
     color: #666666;
     font-family: "manksansregular", sans-serif, Sans;
-    font-size: 17px;
+    font-size: 16px;
     text-transform: lowercase;
     width: 100%;
     text-align: left;
@@ -1255,3 +1340,135 @@ font-family: "manksansregular", sans-serif, Sans;
   background: #ffa483;
 }
 
+#cboxOverlay {
+  background: transparent url('../images/bg_add_to_cart_overlay.png') left top;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.page-checkout-shipping .form-item-commerce-shipping-shipping-service label {
+  font-size: 0;
+}
+.page-checkout-shipping .form-item-commerce-shipping-shipping-service label[for="edit-commerce-shipping-shipping-service-bpost"]:before {
+  content:'Bpost';
+  font-size: initial;
+}
+.page-checkout-shipping .form-item-commerce-shipping-shipping-service.form-type-radio .description {
+  margin-left: 0;
+}
+.page-checkout-shipping .form-item-commerce-shipping-shipping-service label[for="edit-commerce-shipping-shipping-service-free-pickup"]:before {
+  content:'Gratis afhaling';
+  font-size: initial;
+}
+.component-type-flat-rate-bpost .component-total {
+  display: none;
+}
+
+#region-footer a,
+#region-footer a:link,
+#region-footer a:hover,
+#region-footer a.active,
+#region-footer a:visited {
+  font-family: "manksansregular", sans-serif, Sans;
+}
+
+.page-cart #views-form-commerce-cart-form-default table.commerce-price-formatted-components {
+  margin-bottom: 5px;
+}
+
+.page-user form#user-login #user_login_form,
+.page-checkout form#user-login #user_login_form {
+  border-color: #ddd !important;
+}
+
+.form-item .description {
+  font-family: "manksansregular", sans-serif, Sans;
+}
+
+.page-user form#user-register-form .form-item-pass .password-parent .password-strength,
+.page-user form#user-profile-form .form-item-pass .password-parent .password-strength,
+.page-checkout form#user-register-form .form-item-pass .password-parent .password-strength,
+.page-checkout form#user-profile-form .form-item-pass .password-parent .password-strength {
+  right: 0 !important;
+}
+
+.page-user .profile ul.user-information {
+  margin-top: 10px;
+  margin-left: 0;
+}
+
+ul.user-profile-category li {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.page-user .profile ul.user-information li,
+.page-checkout .profile ul.user-information li {
+  width: 31% !important;
+}
+
+button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"],
+.page-user-addressbook ul.action-links li a {
+  margin: 0;
+  background-image: none;
+  background-color: #f6af8e;
+  border: 1px solid #fce7dd;
+  width: 135px;
+  text-align: center;
+  padding: 0 30px;
+  height: 29px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  font-weight: 400;
+  font-size: 13px;
+  font-family: "manksansregular", sans-serif, Sans;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  text-transform: lowercase;
+  text-shadow: none;
+  width: auto;
+}
+
+.form-actions input:hover {
+  background: #f6af8e;
+}
+
+ul li {
+  margin-left: 0;
+}
+
+.page-user-addressbook ul.action-links {
+  margin-left: 0;
+}
+
+.page-user .tabs ul.secondary {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.page-user .tabs ul.secondary li a {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  color: #808080;
+  display: block;
+  font-family: "manksansregular", sans-serif, Sans;
+  padding: 4px 20px;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+.page-user .profile ul.user-recent-orders {
+  margin-left: 0
+}
+
+.page-user .profile ul.user-recent-orders li {
+  margin-right: 0
+}

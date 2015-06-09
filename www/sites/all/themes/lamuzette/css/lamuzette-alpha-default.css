@@ -9,3 +9,16 @@
   padding-left: 2.25%;
   margin-top: 16px;
 }
+
+.page-checkout #commerce-checkout-form-checkout fieldset label,
+.page-checkout #commerce-checkout-form-review fieldset label {
+  float: left;
+  width: 30%;
+  padding-right: 1%;
+  display: inline;
+}
+
+.page-user form#user-login #user_login_form,
+.page-checkout form#user-login #user_login_form {
+  border-color: #ddd !important;
+}
