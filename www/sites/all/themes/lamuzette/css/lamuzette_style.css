@@ -237,6 +237,9 @@ tr.even .form-item {
   margin: 0 !important;
   width: 100% !important;
 }
+.zone-shopmenu #block-system-main-menu {
+	clear: both;
+}
 
 .page-user ul.tabs.primary,
 #region-shopmenu .block-menu ul.menu {
@@ -250,7 +253,7 @@ tr.even .form-item {
 
 .page-user ul.tabs.primary li,
 #region-shopmenu .block-menu ul.menu li {
-  display: inline-block;
+  display: table-cell;
   margin: 0;
   padding: 0.1%;
   text-align: center;
