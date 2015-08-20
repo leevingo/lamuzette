@@ -240,6 +240,7 @@ tr.even .form-item {
 
 .page-user ul.tabs.primary,
 #region-shopmenu .block-menu ul.menu {
+  clear: both;
   display: table;
   width: 100%;
 }
@@ -259,6 +260,7 @@ tr.even .form-item {
 
 #region-shopmenu .block-menu ul.menu li {
   width: 14.088541%;
+  //width: 13.78645%;
 }
 
 .page-user ul.tabs.primary li a,
@@ -1349,24 +1351,6 @@ font-family: "manksansregular", sans-serif, Sans;
   width: 100%;
 }
 
-.page-checkout-shipping .form-item-commerce-shipping-shipping-service label {
-  font-size: 0;
-}
-.page-checkout-shipping .form-item-commerce-shipping-shipping-service label[for="edit-commerce-shipping-shipping-service-bpost"]:before {
-  content:'Bpost';
-  font-size: initial;
-}
-.page-checkout-shipping .form-item-commerce-shipping-shipping-service.form-type-radio .description {
-  margin-left: 0;
-}
-.page-checkout-shipping .form-item-commerce-shipping-shipping-service label[for="edit-commerce-shipping-shipping-service-free-pickup"]:before {
-  content:'Gratis afhaling';
-  font-size: initial;
-}
-.component-type-flat-rate-bpost .component-total {
-  display: none;
-}
-
 #region-footer a,
 #region-footer a:link,
 #region-footer a:hover,
@@ -1435,6 +1419,7 @@ input[type="button"],
   text-transform: lowercase;
   text-shadow: none;
   width: auto;
+  vertical-align: baseline;
 }
 
 .form-actions input:hover {
@@ -1471,4 +1456,9 @@ ul li {
 
 .page-user .profile ul.user-recent-orders li {
   margin-right: 0
+}
+
+.view-collection-taxonomy-term .view-content .item-list .products-per-collection li.views-row:nth-child(4n+5) {
+  clear: none;
+  float: left;
 }

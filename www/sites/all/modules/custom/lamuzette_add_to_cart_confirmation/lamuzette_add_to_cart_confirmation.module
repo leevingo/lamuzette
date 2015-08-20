@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Provides an "add to cart" confirmation dialog, shown after the customer has
+ * added a product his cart.
+ */
+
+/**
+ * Implements hook_views_api().
+ */
+function lamuzette_add_to_cart_confirmation_views_api() {
+  return array('api' => 3);
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ *
+ * Create new view mode for product display, commerce product.
+ */
+function lamuzette_add_to_cart_confirmation_entity_info_alter(&$entity_info) {
+  $entity_info['commerce_product']['view modes']['add_to_cart_confirmation_view'] = array(
+    'label' => t('Add to cart confirmation view'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function lamuzette_add_to_cart_confirmation_menu() {
+  $items = array();
+
+  $items['admin/commerce/config/advanced-settings/lamuzette-add-to-cart'] = array(
+    'title'            => t('Lamuzette Add to cart confirmation settings'),
+    'description'      => t('Settings for your ad to cart confirmation message.'),
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('lamuzette_add_to_cart_confirmation_admin_settings'),
+    'access arguments' => array('administer site'),
+    'file'             => 'lamuzette_add_to_cart_confirmation.admin.inc',
+  );
+
+  return $items;
+}

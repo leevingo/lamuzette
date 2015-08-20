@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file
+ * Installs, updates, and uninstalls lamuzette.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function lamuzette_install() {
+  lamuzette_update_7001();
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function lamuzette_uninstall() {
+
+}
+
+/**
+ * Resave all product display to set correct categories after resetting in UI.
+ */
+function lamuzette_update_7002() {
+  $product_id_result = db_select('node', 'n')
+      ->fields('n', array('nid'))
+      ->condition('n.type', 'product_display')
+      ->execute();
+  foreach ($product_id_result as $result) {
+    $product_display = node_load($result->nid);
+    node_save($product_display);
+  }
+}

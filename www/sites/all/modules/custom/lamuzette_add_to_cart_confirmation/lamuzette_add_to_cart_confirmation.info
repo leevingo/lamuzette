@@ -1,0 +1,13 @@
+name = Lamuzette add to cart confirmation
+description = Provides an "add to cart" confirmation screen.
+core = 7.x
+package = Commerce (contrib)
+dependencies[] = commerce_cart
+dependencies[] = commerce_product_ui
+dependencies[] = views
+dependencies[] = rules
+stylesheets[all][] = css/lamuzette_add_to_cart_confirmation.css
+scripts[] = js/lamuzette_add_to_cart_confirmation.js
+
+project = "lamuzette"
+

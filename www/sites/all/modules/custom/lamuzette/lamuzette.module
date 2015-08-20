@@ -5,6 +5,10 @@
  */
 
 
+function lamuzette_init() {
+
+}
+
 function lamuzette_menu_alter(&$items) {
   $items['admin/config/development/performance']['access callback'] = '_accesscheck';
 }
@@ -15,29 +19,4 @@ function _accesscheck(){
      return TRUE;
   }
   return FALSE;
-}
-
-/**
- * Implements hook_action_info.
- * @return type
- */
-function lamuzette_rules_action_info() {
-
-  $action = array(
-    'lamuzette_calculate_rate_by_order_weight' => array(
-      'group' => 'Commerce Shipping',
-      'label' => t('Calculate rate by order weight'),
-      'provides' => array(
-        'order' => array('type' => 'commerce_order', 'label' => t('The order object.')),
-      ),
-      'parameter' => array(
-        'order' => array('type' => 'commerce_order', 'label' => t('The order object.')),
-      ),
-    )
-  );
-  return $action;
-}
-
-function lamuzette_calculate_rate_by_order_weight($order_id) {
-
 }
