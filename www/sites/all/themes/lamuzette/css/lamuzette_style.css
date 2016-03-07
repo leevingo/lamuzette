@@ -254,7 +254,7 @@ tr.even .form-item {
 
 .page-user ul.tabs.primary li,
 #region-shopmenu .block-menu ul.menu li {
-  display: table-cell;
+  display: inline-block;
   margin: 0;
   padding: 0.1%;
   text-align: center;
@@ -262,8 +262,8 @@ tr.even .form-item {
 }
 
 #region-shopmenu .block-menu ul.menu li {
-  width: 14.088541%;
-  //width: 13.78645%;
+  //width: 14.088541%;
+  width: 13.78645%;
 }
 
 .page-user ul.tabs.primary li a,
@@ -635,8 +635,8 @@ font-family: "manksansregular", sans-serif, Sans;
 .page-checkout .checkout-buttons input#edit-back,
 .page-checkout .checkout-buttons input.checkout-back {
   background-color: transparent;
-  margin: 0;
-  padding: 25px 0px 25px 10px;
+  margin: 0 0 0 10px;
+  padding: 2px;
   font-family: Georgia, "Times New Roman", Serif;
   font-size: 15px;
   line-height: 120%;
@@ -675,6 +675,11 @@ font-family: "manksansregular", sans-serif, Sans;
 .page-checkout #commerce-checkout-form-checkout .locality-block .form-item input {
   width: 65%;
 }
+
+.page-checkout #commerce-checkout-form-checkout .form-checkbox.ajax-processed {
+  width: 5%;
+}
+
 .page-checkout #commerce-checkout-form-checkout input.checkout-cancel,
 .page-checkout #commerce-checkout-form-checkout input.checkout-continue,
 .page-checkout #commerce-checkout-form-checkout #edit-customer-profile-shipping-commerce-customer-profile-copy {
@@ -900,12 +905,16 @@ font-family: "manksansregular", sans-serif, Sans;
   font-style: italic;
 }
 
+#edit-customer-profile-billing,
 #customer-profile-billing-ajax-wrapper,
 #customer-profile-shipping-ajax-wrapper {
-  width: 48%;
+  width: 49%;
   display: inline-block;
   vertical-align: top;
-  padding: 1%;
+}
+
+#customer-profile-billing-ajax-wrapper #edit-customer-profile-billing {
+  width: 100%
 }
 
 #commerce-shipping-service-ajax-wrapper legend {
@@ -930,9 +939,11 @@ font-family: "manksansregular", sans-serif, Sans;
   color: #808080;
 }
 
+.field-name-commerce-customer-address .street-block,
 .field-name-commerce-customer-address .street-block .thoroughfare {
-  float: left;
+  //float: left;
   padding-right: 5px;
+  display: block;
 }
 
 .page-checkout-review .form-item label {
@@ -1410,6 +1421,7 @@ input[type="button"],
   text-align: center;
   padding: 0 30px;
   height: 29px;
+  line-height: 10px;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   -khtml-border-radius: 0;
@@ -1464,4 +1476,46 @@ ul li {
 .view-collection-taxonomy-term .view-content .item-list .products-per-collection li.views-row:nth-child(4n+5) {
   clear: none;
   float: left;
+}
+
+.page-user form#user-pass .back-to-login, .page-checkout form#user-pass .back-to-login {
+  float: left;
+  margin: 0;
+  padding-top: 14px;
+}
+
+.page-user a.login-account, .page-checkout a.login-account {
+  text-transform: lowercase;
+  padding: 4px 15px;
+  font-family: "manksansregular",sans-serif,Sans;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+html.js input.form-autocomplete {
+  background-image: url('../images/throbber.gif'); /* tweak this according to your gif */
+  background-position: 100% 0px; /* tweak this according to your gif */
+  background-repeat: no-repeat;
+}
+html.js input.throbbing {
+  background-position: 100% -20px; /* tweak this according to your gif */
+}
+
+/* these apply to all ajax progresses */
+.ajax-progress {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.ajax-progress .throbber {
+  background: transparent url('../images/throbber.gif') no-repeat 0px 0px; /* tweak this according to your gif */
+  float: left;
+  height: 20px; /* tweak this according to your gif */
+  width: 20px; /* tweak this according to your gif */
+  margin: 2px;
+}
+
+.checkout-processing { /* this is for the commerce checkout */
+  background-image: url('../images/throbber.gif');
+  padding-right: 16px !important;
 }
